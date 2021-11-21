@@ -1,0 +1,91 @@
+MDScreen:
+    name: "login"
+    MDFloatLayout:
+        md_bg_color: 1, 1, 1, 1
+        Image:
+            source: "logo1.jpg"
+            size_hint: .5, .5
+            pos_hint: {"center_x": .5, "center_y": .78}
+        MDFloatLayout:
+            size_hint: .85, .08
+            pos_hint: {"center_x": .5, "center_y": .52}
+            canvas:
+                Color:
+                    rgb: (238/255, 238/255, 238/255, 1)
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [22]
+            TextInput:
+                hint_text: "Email"
+                size_hint: 1, None
+                pos_hint: {"center_x": .5, "center_y": .5}
+                height: self.minimum_height
+                multiline: False
+                cursor_color: 57/255, 66/255, 143/255, 1
+                cursor_width: "2sp"
+                foreground_color: 57/255, 66/255, 143/255, 1
+                background_color: 0, 0, 0, 0
+                padding: 15
+                font_name: "Poppins-Regular"
+                font_size: "15sp"
+        MDFloatLayout:
+            size_hint: .85, .08
+            pos_hint: {"center_x": .5, "center_y": .41}
+            canvas:
+                Color:
+                    rgb: (238/255, 238/255, 238/255, 1)
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [22]
+            TextInput:
+                hint_text: "Password"
+                size_hint: 1, None
+                pos_hint: {"center_x": .5, "center_y": .5}
+                height: self.minimum_height
+                multiline: False
+                password: True
+                cursor_color: 57/255, 66/255, 143/255, 1
+                cursor_width: "2sp"
+                foreground_color: 57/255, 66/255, 143/255, 1
+                background_color: 0, 0, 0, 0
+                padding: 15
+                font_name: "Poppins-Regular"
+                font_size: "15sp"
+        Button:
+            text: "LOGIN"
+            font_name: "Poppins-SemiBold"
+            font_size: "15sp"
+            size_hint: .4, .08
+            pos_hint: {"center_x": .29, "center_y": .3}
+            background_color: 0, 0, 0, 0
+            color: 1, 1, 1, 1
+            canvas.before:
+                Color:
+                    rgb: 11/255, 205/255, 215/255
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [22]
+        Button:
+            text: "REGISTER"
+            font_name: "Poppins-SemiBold"
+            font_size: "15sp"
+            size_hint: .4, .08
+            pos_hint: {"center_x": .72, "center_y": .3}
+            background_color: 0, 0, 0, 0
+            color: 1, 1, 1, 1
+            canvas.before:
+                Color:
+                    rgb: 11/255, 205/255, 215/255
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [22]
+        MDTextButton:
+            text: "Forgot Password?"
+            font_size: "13sp"
+            pos_hint: {"center_x": .5,"center_y": .22}
+            halign: "center"
+            color: 120/255, 120/255, 120/255, 1
